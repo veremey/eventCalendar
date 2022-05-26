@@ -10,6 +10,8 @@ interface EventCalendarProps {
 
 const EventCalendar: FC<EventCalendarProps> = (props) => {
 
+  // COMMENT: dateCellRender краще винести в компонент. 
+  //  currentDayEvents = useMemo(() => ) щоб не робити фільтрацію на кожному ре-рендері
   const dateCellRender = (value: Moment) => {
     const formatedDate = formatDate(value.toDate())
     const currentDayEvents = props.events.filter(ev => ev.date === formatedDate)

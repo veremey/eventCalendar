@@ -15,7 +15,7 @@ const Event: FC = () => {
   useEffect(() => {
     fetchGuests()
     fetchEvents(user.username)
-  }, []) /* eslint-disable-line */
+  }, []) /* eslint-disable-line */ // COMMENT: тут треба передавать аргументи які ти юзаєш
 
   const addNewEvent = (event: IEvent) => {
     setModalVisible(false)
